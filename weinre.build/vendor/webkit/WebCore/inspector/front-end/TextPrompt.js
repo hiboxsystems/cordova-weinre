@@ -84,15 +84,18 @@ WebInspector.TextPrompt.prototype = {
             key = event.keyIdentifier || event.key;
 
         switch (key) {
+            case "ArrowUp":
             case "Up":
                 this.upKeyPressed(event);
                 break;
+            case "ArrowDown":
             case "Down":
                 this.downKeyPressed(event);
                 break;
             case "U+0009": // Tab
                 this.tabKeyPressed(event);
                 break;
+            case "ArrowRight":
             case "Right":
             case "End":
                 if (!this.acceptAutoComplete())
